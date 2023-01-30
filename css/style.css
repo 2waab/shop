@@ -4,12 +4,12 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family: "Poppins", sans-serif;
 }
 body {
-    --main-transition: 0.3s;
+    --main-transition: 500ms;
     --black-color: #000;
     --white-color: #fff;
+    font-family: "Poppins", sans-serif;
 }
 a {
 	text-decoration: none;
@@ -57,34 +57,49 @@ ul {
     justify-content: space-between;
     position: relative;
 }
-.bars {
-    width: 20px;
-    height: 10px;
+.menu-container {
+    width: 30px;
+    height: 30px;
     cursor: pointer;
     position: relative;
 }
-.bars span {
+.menu-container .line {
+    height: 26px;
+    width: 26px;
     position: absolute;
-    display: block;
-    left: 0;
-    height: 2px;
-    width: 100%;
+    left: 2px;
+    top: 2px;
+    transition: transform 300ms ease-in-out;
+}
+.menu-container .line-inner {
+    height: 4px;
+    width: 29px;
     background-color: var(--white-color);
-    transition: var(--main-transition);
+    border-radius: 4px;
+    position: absolute;
+    transition: transform 200ms ease-in-out;
+    transition-delay: 200ms;
 }
-.bars span:first-child {
-    top: 0;
+.menu-container .line-inner-1 {
+    top: 9px;
+    transform: translateY(-3px);
 }
-.bars span:last-child {
-    bottom: 0px;
+.menu-container .line-inner-2 {
+    bottom: 9px;
+    transform: translateY(3px);
 }
-.bars.open span:first-child {
-    top: 4px;
-    transform: rotate(45deg);
+.menu-container.open .line-1 {
+    transform: rotateZ(45deg);
 }
-.bars.open span:last-child {
-    bottom: 4px;
-    transform: rotate(-45deg);
+.menu-container.open .line-2 {
+    transform: rotateZ(-45deg);
+}
+.menu-container.open .line-inner {
+    transform: none;
+    transition: transform 200ms ease-in-out;
+}
+.menu-container.open .line {
+    transition-delay: 200ms;
 }
 .nav {
     position: fixed;

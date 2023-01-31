@@ -19,6 +19,9 @@ ul {
 	margin: 0;
 	padding: 0;
 }
+img {
+    width: 100%;
+}
 .container {
 	padding-left: 15px;
 	padding-right: 15px;
@@ -40,15 +43,24 @@ ul {
 		width: 1170px;
 	}
 }
+.main-heading {
+    width: fit-content;
+    margin: 15px auto;
+    color: var(--black-color);
+}
 .header {
     width: 101%;
     background-color: #000000b5;
-    backdrop-filter: blur(10px);
+    backdrop-filter: blur(15px);
     position: fixed;
     top: 0;
     left: 50%;
     transform: translateX(-50%);
     z-index: 100000;
+    transition: var(--main-transition);
+}
+.header.disabl {
+    background-color: var(--black-color);
 }
 .header .container {
     min-height: 60px;
@@ -113,7 +125,7 @@ ul {
     transition: var(--main-transition);
 }
 .nav.open {
-    height: 360px;
+    height: calc(100vh - 60px);
 }
 .nav .container {
     flex-direction: column;
@@ -200,4 +212,122 @@ ul {
     margin-top: 10px;
     text-transform: lowercase;
     line-height: 2;
+}
+/* Start Ad Section */
+.ad {
+    background-color: var(--white-color);
+    padding: 20px;
+}
+.ad .container {
+    width: 100%;
+    height: 150px;
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-image: url("../img/adImg/livingromm.jpg");
+    background-size: cover;
+    background-position: center center;
+    position: relative;
+    overflow: hidden;
+}
+.ad .container::after {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    background-color: #000000ba;
+    z-index: 1;
+}
+.ad .container h4 {
+    position: relative;
+    z-index: 2;
+    color: var(--white-color);
+    font-size: 30px;
+    text-align: center;
+}
+/* Start Top Rate Prodcut */
+.top-rate {
+    padding-top: 20px;
+    padding-bottom: 20px;
+}
+.top-rate .container {
+    overflow: hidden;
+}
+.top-rate .res {
+    overflow-x: scroll;
+    padding: 0 10px;
+}
+.top-rate .res::-webkit-scrollbar {
+    height: 3px;
+    border-radius: 99999px;
+    padding: 10px;
+}
+.top-rate .res::-webkit-scrollbar-track {
+    background-color: var(--white-color);
+}
+.top-rate .res::-webkit-scrollbar-thumb  {
+    background-color: #aaa;
+}
+.top-rate .container .responsive-box {
+    display: flex;
+    align-items: center;
+    min-width: fit-content;
+    padding: 10px 0;
+}
+.top-rate .box-of-prodact {
+    width: 200px;
+    background-color: var(--white-color);
+    border-radius: 10px;
+    box-shadow: 0 0px 5px rgb(0, 0, 0, 0.2);
+    padding: 10px;
+}
+.top-rate .box-of-prodact img {
+    border-radius: 10px;
+}
+.top-rate .box-of-prodact .text {
+    margin-top: 10px;
+    padding: 0 10px;
+}
+.top-rate .box-of-prodact .text .head {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.top-rate .box-of-prodact .text .head span {
+    font-size: 14px;
+    color: var(--black-color);
+}
+.top-rate .box-of-prodact .text .head span i {
+    color: yellow;
+}
+.top-rate .box-of-prodact .text .foot {
+    margin-top: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.top-rate .box-of-prodact .text .foot p {
+    font-weight: bold;
+    color: #ff2525;
+    font-size: 22px;
+}
+.top-rate .box-of-prodact .text .foot button {
+    padding: 5px 10px;
+    border: none;
+    outline: none;
+    color: var(--white-color);
+    background-color: #0075ff;
+    border-radius: 4px;
+    cursor: pointer;
+}
+.top-rate .box-of-prodact .text .paragraph {
+    font-size: 14px;
+    color: #666;
+    margin-top: 5px;
+}
+.top-rate .box-of-prodact:not(:last-child) {
+    margin-right: 15px;
 }

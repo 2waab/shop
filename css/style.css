@@ -284,18 +284,29 @@ img {
     padding: 10px;
     cursor: pointer;
     box-shadow: 0 5px 10px rgb(0, 0, 0, 0.1);
+    min-height: 445px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-direction: column;
+}
+.top-rate .box-of-prodact .img {
+    width: 100%;
+    height: 200px;
+    position: relative;
 }
 .top-rate .box-of-prodact img {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
     border-radius: 10px;
+    max-width: 200px;
+    height: 200px;
 }
 .top-rate .box-of-prodact .text {
     margin-top: 10px;
     padding: 0 10px;
-}
-.top-rate .box-of-prodact .text .head {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
 }
 .top-rate .box-of-prodact .text .head h5 {
     color: var(--black-color);

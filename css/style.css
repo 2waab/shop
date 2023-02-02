@@ -291,6 +291,7 @@ img {
     align-items: center;
     justify-content: space-between;
     flex-direction: column;
+    max-height: 400px;
 }
 .box-of-prodact .img {
     width: 100%;
@@ -308,7 +309,6 @@ img {
 }
 .box-of-prodact .text {
     margin-top: 10px;
-    padding: 0 10px;
 }
 .box-of-prodact .text .head h5 {
     color: var(--black-color);
@@ -321,28 +321,24 @@ img {
 .box-of-prodact .text .head span i {
     color: #ff9800;
 }
-.box-of-prodact .text .foot {
-    margin-top: 20px;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-}
-.box-of-prodact .text .foot p {
+.box-of-prodact .text p {
     border-radius: 4px;
     font-weight: bold;
-    color: var(--white-color);
+    color: #ff2525;
     font-size: 22px;
-    background-color: #ff2525;
-    padding: 1px 10px;
+    margin-top: 5px;
 }
-.box-of-prodact .text .foot button {
-    padding: 10px 30px;
+.box-of-prodact .text button {
+    display: block;
+    width: 30px;
+    height: 30px;
     border: none;
     outline: none;
     color: var(--white-color);
     background-color:  #0063d9;
-    border-radius: 4px;
+    border-radius: 50%;
     cursor: pointer;
+    margin-top: 5px;
 }
 .box-of-prodact .text .cat {
     display: flex;
@@ -369,15 +365,6 @@ img {
     background-size: cover;
     background-position: center center;
     position: relative;
-}
-.for-women::after {
-    content: "";
-    position: absolute;
-    width: 100%;
-    height: 100%;
-    top: 0;
-    left: 0;
-    background-image: linear-gradient(to top, var(--black-color), var(--black-color), #1a1a1a00, #1a1a1a00);
 }
 .for-women .main-heading {
     position: relative;

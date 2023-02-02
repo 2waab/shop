@@ -20,7 +20,7 @@ fetch ("https://fakestoreapi.com/products")
                 box.className = "box-of-prodact";
                 box.innerHTML = `
                     <div class="img">
-                    <img src="${data[i].image}" alt="" />
+                        <img src="${data[i].image}" alt="" />
                     </div>
                     <div class="text">
                         <div class="head">
@@ -31,10 +31,8 @@ fetch ("https://fakestoreapi.com/products")
                             <div class="catogry">${data[i].category}</div>
                             <div class="catogry">top rate</div>
                         </div>
-                        <div class="foot">
-                            <p>$${data[i].price}</p>
-                            <button><i class="fa-solid fa-shopping-bag"></i></button>
-                        </div>
+                        <p>$${data[i].price}</p>
+                        <button><i class="fa-solid fa-shopping-bag"></i></button>
                     </div>
                 `;
                 contentOfBoxesOfTop.appendChild(box);
@@ -44,18 +42,18 @@ fetch ("https://fakestoreapi.com/products")
                 box.className = "box-of-prodact";
                 box.innerHTML = `
                     <div class="img">
-                    <img src="${data[i].image}" alt="" />
+                        <img src="${data[i].image}" alt="" />
                     </div>
                     <div class="text">
                         <div class="head">
                             <h5>${data[i].title}</h5>
                             <span><i class="fa-solid fa-star"></i> ${data[i].rating.rate}</span>
                         </div>
-                        <div class="catogry">${data[i].category}</div>
-                        <div class="foot">
-                            <p>$${data[i].price}</p>
-                            <button><i class="fa-solid fa-shopping-bag"></i></button>
+                        <div class="cat">
+                            <div class="catogry">${data[i].category}</div>
                         </div>
+                        <p>$${data[i].price}</p>
+                        <button><i class="fa-solid fa-shopping-bag"></i></button>
                     </div>
                 `;
                 contentOfBoxesOfClothing.appendChild(box);
@@ -65,18 +63,18 @@ fetch ("https://fakestoreapi.com/products")
                 box.className = "box-of-prodact";
                 box.innerHTML = `
                     <div class="img">
-                    <img src="${data[i].image}" alt="" />
+                        <img src="${data[i].image}" alt="" />
                     </div>
                     <div class="text">
                         <div class="head">
                             <h5>${data[i].title}</h5>
                             <span><i class="fa-solid fa-star"></i> ${data[i].rating.rate}</span>
                         </div>
-                        <div class="catogry">${data[i].category}</div>
-                        <div class="foot">
-                            <p>$${data[i].price}</p>
-                            <button><i class="fa-solid fa-shopping-bag"></i></button>
+                        <div class="cat">
+                            <div class="catogry">${data[i].category}</div>
                         </div>
+                        <p>$${data[i].price}</p>
+                        <button><i class="fa-solid fa-shopping-bag"></i></button>
                     </div>
                 `;
                 contentOfBoxesOfForWomen.appendChild(box);

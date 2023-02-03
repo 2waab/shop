@@ -41,41 +41,41 @@ fetch ("https://fakestoreapi.com/products")
                 let box = document.createElement("div");
                 box.className = "box-of-prodact";
                 box.innerHTML = `
-                    <div class="img">
-                        <img src="${data[i].image}" alt="" />
+                <div class="img">
+                    <img src="${data[i].image}" alt="" />
+                </div>
+                <div class="text">
+                    <div class="head">
+                        <h5>${data[i].title}</h5>
+                        <span><i class="fa-solid fa-star"></i> ${data[i].rating.rate}</span>
                     </div>
-                    <div class="text">
-                        <div class="head">
-                            <h5>${data[i].title}</h5>
-                            <span><i class="fa-solid fa-star"></i> ${data[i].rating.rate}</span>
-                        </div>
-                        <div class="cat">
-                            <div class="catogry">${data[i].category}</div>
-                        </div>
-                        <p>$${data[i].price}</p>
-                        <button><i class="fa-solid fa-shopping-bag"></i></button>
+                    <div class="cat">
+                        <div class="catogry">${data[i].category}</div>
                     </div>
+                    <p>$${data[i].price}</p>
+                    <button><i class="fa-solid fa-shopping-bag"></i></button>
+                </div>
                 `;
                 contentOfBoxesOfClothing.appendChild(box);
             };
-            if (data[i].category === "women's clothing") {
+            if (data[i].category === "jewelery") {
                 let box = document.createElement("div");
                 box.className = "box-of-prodact";
                 box.innerHTML = `
-                    <div class="img">
-                        <img src="${data[i].image}" alt="" />
+                <div class="img">
+                    <img src="${data[i].image}" alt="" />
+                </div>
+                <div class="text">
+                    <div class="head">
+                        <h5>${data[i].title}</h5>
+                        <span><i class="fa-solid fa-star"></i> ${data[i].rating.rate}</span>
                     </div>
-                    <div class="text">
-                        <div class="head">
-                            <h5>${data[i].title}</h5>
-                            <span><i class="fa-solid fa-star"></i> ${data[i].rating.rate}</span>
-                        </div>
-                        <div class="cat">
-                            <div class="catogry">${data[i].category}</div>
-                        </div>
-                        <p>$${data[i].price}</p>
-                        <button><i class="fa-solid fa-shopping-bag"></i></button>
+                    <div class="cat">
+                        <div class="catogry">${data[i].category}</div>
                     </div>
+                    <p>$${data[i].price}</p>
+                    <button><i class="fa-solid fa-shopping-bag"></i></button>
+                </div>
                 `;
                 contentOfBoxesOfForWomen.appendChild(box);
             };

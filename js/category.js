@@ -3,6 +3,7 @@ let headOfPage = document.querySelector(".header");
 let navContent = document.querySelector(".nav");
 let titleOfCatoogry = document.querySelector(".catogry-title");
 let boxes = document.querySelector(".catogry-boxes");
+let links = document.querySelectorAll(".header .nav ul li a");
 
 navBtn.onclick = () => {
     navBtn.classList.toggle("open");
@@ -38,3 +39,18 @@ for (let i = 0; i < shopData.length; i++) {
         boxes.appendChild(box);
     };
 };
+
+links.forEach(a => {
+    a.addEventListener("click", () => {
+        for (let i = 0; i < shopData.length; i++) {
+            if (shopData[i].show === true) {
+                shopData[i].show = false;
+                window.localStorage.setItem("shop", JSON.stringify(shopData));
+            };
+            if (a.textContent === shopData[i].category) {
+                shopData[i].show = true;
+                window.localStorage.setItem("shop", JSON.stringify(shopData));
+            };
+        };
+    });
+});
